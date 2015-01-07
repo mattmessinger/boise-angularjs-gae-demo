@@ -1,0 +1,34 @@
+application: XXXXX
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /images
+  static_dir: dist/images
+- url: /scripts
+  static_dir: dist/scripts
+- url: /styles
+  static_dir: dist/styles
+- url: /views
+  static_dir: dist/views
+- url: /favicon\.ico
+  static_files: dist/favicon.ico
+  upload: web/dist/favicon\.ico
+
+- url: /profile
+  script: web.application
+  login: required
+  secure: always
+
+- url: /.*
+  script: web.application
+  secure: always
+
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest

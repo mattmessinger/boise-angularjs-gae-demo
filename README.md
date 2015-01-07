@@ -32,9 +32,10 @@ Server:
  To build and run the server:
 
   # one time setup
-  - Install Google App Engine SDK for Python: https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python
+  Install Google App Engine SDK for Python: https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python
   
   # run the local development server:
   > cd git/segment
-  > # build the UI as described above
+  
+  # build the UI as described above
   > ~/google_appengine/dev_appserver.py server

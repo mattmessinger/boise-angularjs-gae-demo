@@ -20,7 +20,7 @@ To build and run the UI
 ### run the UI with node server (ui dev only)
   > $ grunt serve
 
-### build the UI for running with backend. this puts the "dist" folder in git/segment/server/web.
+### build the UI for running with backend. this puts the "dist" folder in git/boise-angularjs-gae-demo/server/web.
   > $ grunt build --force
 
 

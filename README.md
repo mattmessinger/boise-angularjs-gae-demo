@@ -10,11 +10,7 @@ This project is made up of two components:
  server - this is a python app that hosts the ui and api server
 
 
-Development:
-
-UI: 
-
- To build and run the UI:
+To build and run the UI:
 
   # one time setup
   > cd ui
@@ -27,15 +23,18 @@ UI:
   # build the UI for running with backend. this puts the "dist" folder in git/segment/server/web.
   > grunt build --force
 
-Server:
 
- To build and run the server:
+To build and run the server:
 
   # one time setup
-  Install Google App Engine SDK for Python: https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python
+  - Install Google App Engine SDK for Python: https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python
+  - Create a new GCP Project: https://cloud.google.com/
+  - Edit the server/app.yaml file - change "application: XXXXX" to the  "Project ID" your GCP Project
   
-  # run the local development server:
-  > cd git/segment
-  
-  # build the UI as described above
+  # run the local development server
+  > cd git/boise-angularjs-gae-demo
   > ~/google_appengine/dev_appserver.py server
+  
+  # deploy to production
+  > cd git/boise-angularjs-gae-demo
+  > ~/google_appengine/appcfg.py update  server
